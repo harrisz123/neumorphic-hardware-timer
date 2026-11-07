@@ -69,7 +69,7 @@ class TimerAppWidget : GlanceAppWidget() {
                         .fillMaxWidth()
                         .height(60.dp)
                         .clickable(actionStartActivity<QuickDialOverlayActivity>())
-                )
+                ) {}
 
                 // Middle dial row: Left (-1m), Center Knob (Start/Pause), Right (+1m)
                 Row(
@@ -85,14 +85,14 @@ class TimerAppWidget : GlanceAppWidget() {
                             .fillMaxHeight()
                             .width(80.dp)
                             .clickable(actionRunCallback<AdjustTimerMinusCallback>())
-                    )
+                    ) {}
 
                     // Center Knob tap target: Toggle Start / Pause
                     Box(
                         modifier = GlanceModifier
                             .size(110.dp)
                             .clickable(actionRunCallback<ToggleRunActionCallback>())
-                    )
+                    ) {}
 
                     // Right dial tap target: Quick +1m step
                     Box(
@@ -100,7 +100,7 @@ class TimerAppWidget : GlanceAppWidget() {
                             .fillMaxHeight()
                             .width(80.dp)
                             .clickable(actionRunCallback<AdjustTimerPlusCallback>())
-                    )
+                    ) {}
                 }
 
                 // Bottom row: Mode switch pill buttons & scrub overlay trigger
@@ -117,7 +117,7 @@ class TimerAppWidget : GlanceAppWidget() {
                             .width(80.dp)
                             .height(40.dp)
                             .clickable(actionRunCallback<SwitchTimerModeCallback>())
-                    )
+                    ) {}
 
                     // Center gap: Launch 60fps Continuous Scrub Overlay
                     Box(
@@ -125,7 +125,7 @@ class TimerAppWidget : GlanceAppWidget() {
                             .width(100.dp)
                             .height(40.dp)
                             .clickable(actionStartActivity<QuickDialOverlayActivity>())
-                    )
+                    ) {}
 
                     // Right Pill: Stopwatch Mode Switch
                     Box(
@@ -133,7 +133,7 @@ class TimerAppWidget : GlanceAppWidget() {
                             .width(80.dp)
                             .height(40.dp)
                             .clickable(actionRunCallback<SwitchStopwatchModeCallback>())
-                    )
+                    ) {}
                 }
             }
         }
